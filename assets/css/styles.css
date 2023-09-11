@@ -18,6 +18,15 @@
   opacity: 1;
 }
 
+.card{
+  min-height: 100%;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
+
 /* mapa */
 .mapouter {
   position: relative;
