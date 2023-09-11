@@ -18,6 +18,9 @@
   opacity: 1;
 }
 
+#about{
+  background-color: rgb(243, 243, 243);
+}
 .card{
   min-height: 100%;
 }
