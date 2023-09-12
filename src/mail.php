@@ -1,6 +1,8 @@
 <?php
 
+namespace app\src;
 
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\PHPMailer;
 
 function send(array $data)
@@ -11,14 +13,14 @@ function send(array $data)
 
     $mail->SMTPSecure = 'tls'; //PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'sandbox.smtp.mailtrap.io';             //Set the SMTP server to send through
+    $mail->Host       = $data['host'];             //Set the SMTP server to send through
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = '875a373776b689';                       //SMTP username
-    $mail->Password   = '6059407e102e45';                       //SMTP password
+    $mail->Username   = $data['username'];                       //SMTP username
+    $mail->Password   = $data['password'];                       //SMTP password
 
     //Recipients
-    $mail->setFrom('php@example.com', $data['quem']);
+    $mail->setFrom($data['from'], $data['quem']);
     $mail->addAddress($data['para']);     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
@@ -31,9 +33,9 @@ function send(array $data)
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Body    = $data['mensagem']; //'This is the HTML message body <b>in bold!</b>';
-    $mail->Subject = $data['assunto']; //'Here is the subject';
+    $mail->Body    = $data['message']; //'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = $data['subject']; //'Here is the subject';
     $mail->AltBody = 'Para ver este mail tenha certeza de estar vendo em um programa que aceite ver HTML!';
-    $mail->msgHTML($data['mensagem']);
+    $mail->msgHTML($data['message']);
     return $mail->send();
 }
