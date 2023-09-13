@@ -3,7 +3,12 @@
     "autoload": {
         "psr-4": {
             "app\\": "app"
-        }
+        },
+        "files": [
+            "app/helpers/custom.php",
+            "app/helpers/mail.php",
+            "app/helpers/validate.php"
+        ]
     },
     "authors": [
         {

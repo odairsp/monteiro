@@ -14,7 +14,9 @@ require '../bootstrap.php';
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Serviços de Contabilidade</title>
 </head>
@@ -26,7 +28,8 @@ require '../bootstrap.php';
                 <a class="navbar-brand" href="#">
                     <img src="./assets/images/logoNome.png" alt="Logo da Empresa de Contabilidade" width="250" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -160,7 +163,8 @@ require '../bootstrap.php';
                                 <input type="email" name="email" class="form-control" placeholder="Email" required />
                             </div>
                             <div class="mb-3">
-                                <textarea name="mensagem" class="form-control" placeholder="Mensagem" rows="4" required></textarea>
+                                <textarea name="mensagem" class="form-control" placeholder="Mensagem" rows="4"
+                                    required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-lg btn-block mb-3">
                                 Enviar
@@ -176,7 +180,9 @@ require '../bootstrap.php';
                 <h3 class="text-center my-5">Onde Estamos</h3>
 
                 <div class="gmap_canvas">
-                    <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?width=300&amp;height=300&amp;hl=en&amp;q=R. Rio de Janeiro, 201 - Cidade Intercap, Taboão da Serra - SP, 06757-290, Brazil&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0"
+                        marginwidth="0"
+                        src="https://maps.google.com.br/maps?width=300&amp;height=300&amp;hl=en&amp;q=R. Rio de Janeiro, 201 - Cidade Intercap, Taboão da Serra - SP, 06757-290, Brazil&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                 </div>
             </div>
         </section>

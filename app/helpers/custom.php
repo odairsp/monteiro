@@ -1,6 +1,5 @@
 <?php
 
-namespace app\helpers;
 
 function dd($dump)
 {
@@ -10,19 +9,21 @@ function dd($dump)
 
 // verifica na superglobal $SERVER se o REQUEST_METHOD é POST/GET e retorna a superglobal corespondente
 
-// function request()
-// {
-//     $request = $_SERVER['REQUEST_METHOD'];
+function request()
+{
+    $request = $_SERVER['REQUEST_METHOD'];
 
-//     return ($request == 'POST') ? $_POST : $_GET;
-// }
-
-
-// function redirect($page){
-//     return header("location:/?page=".$page);
-// }
+    return ($request == 'POST') ? $_POST : $_GET;
+}
 
 
-// function redirectHome(){
-//     return header("location:/");
-// }
+function redirect($page)
+{
+    return header("location:/?page=" . $page);
+}
+
+
+function redirectHome()
+{
+    return header("location:/");
+}

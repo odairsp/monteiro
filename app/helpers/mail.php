@@ -1,9 +1,9 @@
 <?php
 
-namespace app\src;
 
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\PHPMailer;
+
 
 function send(array $data)
 {
@@ -13,11 +13,11 @@ function send(array $data)
 
     $mail->SMTPSecure = 'tls'; //PHPMailer::ENCRYPTION_SMTPS;   //Enable implicit TLS encryption
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = $data['host'];             //Set the SMTP server to send through
+    $mail->Host       = "smtps.monteirorondo.com";             //Set the SMTP server to send through
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = $data['username'];                       //SMTP username
-    $mail->Password   = $data['password'];                       //SMTP password
+    $mail->Username   = 'site@monteirorondo.com';                       //SMTP username
+    $mail->Password   = 'site@monteirorondo.com';
 
     //Recipients
     $mail->setFrom($data['from'], $data['quem']);
